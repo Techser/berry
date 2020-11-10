@@ -641,7 +641,7 @@ handle_button_press(XEvent *e)
     ocy = c->geom.y;
     ocw = c->geom.width;
     och = c->geom.height;
-    last_motion = ev.xmotion.time;
+    last_motion = 0;
     if (XGrabPointer(display, root, False, MOUSEMASK, GrabModeAsync, GrabModeAsync, None, move_cursor, CurrentTime) != GrabSuccess)
         return;
     do {
